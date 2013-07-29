@@ -1,0 +1,226 @@
+@import 'global.less';
+@import 'grid.less';
+
+// LARGE GRID //
+
+// First we set column and gutter widths based on 12 columns 
+// This leaves us with our 12 column golden means grid that makes Fibonacci proud;)
+
+@column-width: 89;
+@gutter-width: 21;
+@columns: 12;
+
+// Give thee divine proportions instead of pixels
+@total-width: 100%;
+
+// LAYOUT //
+
+.container {
+	width: 86%; // Some nice room on desktop and above for negative space
+	padding: 0;
+	margin: 0;
+	margin-right: auto;
+	margin-left: auto;
+	background: transparent;
+}
+
+#top-bar {
+	.column(12);
+
+	header {
+		.row(12);
+		
+		#title {
+			.column(7,12);
+		}
+		#callout {
+			.column(5,12);
+		}
+	}
+}
+#example {
+	.column(12);
+	
+	
+	#column-container {
+		.row(12);
+
+		#c01, #c02, #c03, #c04, #c05, #c06, #c07, #c08, #c09, #c10, #c11, #c12 {
+		.column(1,12);
+		}
+	}
+}
+#hero {
+	.column(12);
+		
+	div {
+		.row(12);
+		padding: 2em 1em;
+
+		figure {
+		.column(7,12);
+		}
+		hgroup {
+		.column(5,12);
+		}
+	}
+}
+#values {
+	.column(12);
+	padding: 1em;	
+	
+	ul {
+		.row(12);
+		padding-top: 1.618em;
+		
+		li {
+			.column(4,12);
+			padding: 0 1em;
+		}
+	}
+}
+#schema {
+	.column(12);	
+	
+	section {
+		.row(12);
+		
+		figure {
+			.column(7,12);
+		}
+		ul {
+			.column(5,12);
+		}
+	}
+}
+#thanks {
+	.column(12);	
+	
+	footer {
+		.row(12);
+		
+		section {
+			.column(5,12);
+		}
+		section:last-child {
+			.column(7,12);
+		}
+	}
+}
+
+
+// Design //
+
+#c01:after {
+	content:" 1";
+}
+#c02:after {
+	content:" 2";
+}
+#c03:after {
+	content:" 3";
+}
+#c04:after {
+	content:" 4";
+}
+#c05:after {
+	content:" 5";
+}
+#c06:after {
+	content:" 6";
+}
+#c07:after {
+	content:" 7";
+}
+#c08:after {
+	content:" 8";
+}
+#c09:after {
+	content:" 9";
+}
+#c10:after {
+	content:" 10";
+}
+#c11:after {
+	content:" 11";
+}
+#c12:after {
+	content:" 12";
+}
+.column_example {
+	-webkit-transition: all 500ms cubic-bezier(0.445, 0.050, 0.550, 0.950); 
+	-moz-transition: all 500ms cubic-bezier(0.445, 0.050, 0.550, 0.950); 
+    -ms-transition: all 500ms cubic-bezier(0.445, 0.050, 0.550, 0.950); 
+    -o-transition: all 500ms cubic-bezier(0.445, 0.050, 0.550, 0.950); 
+    transition: all 500ms cubic-bezier(0.445, 0.050, 0.550, 0.950); /* easeInOutSine */
+}
+#callout {
+	text-align: right;
+	padding: 1.618em 0;
+}
+#hero {
+	background-color: white;
+}
+#schema {
+	padding: 1em;
+}
+#schema figure, #schema ul {
+	padding: 0 1em;
+}
+#schema ul li {
+	padding-bottom: 1.618em;
+}
+#thanks {
+	padding: 1.618em;
+}
+
+/* @media screen and (min-width: 984px) */
+@media screen and (min-width: 60em) {
+  
+  h2{
+	  @h2: @font-ratio * (@base-diff - (@base-diff / @font-ratio));
+	  @h2-local: round(@base-font-size * @h2);
+	  font-size: ~"@{h2-local}px";
+	  font-size: ~"@{h2}rem";	  
+  }
+  h3 {
+    /* Style tweeks go here */  
+    font-size: 24px;
+    font-size: 1.2rem; 
+  }
+}
+/* @media screen and (min-width: 1088px) */
+@media screen and (min-width: 68em) {
+	h2{
+	  @h2: (@base-diff / (@base-diff - (@base-diff / @font-ratio)));
+	  @h2-local: round(@base-font-size * @h2);
+	  font-size: ~"@{h2-local}px";
+	  font-size: ~"@{h2}rem";	  
+  }
+}
+/* @media screen and (min-width: 1392px) */
+@media screen and (min-width: 87em) {
+h3 {
+    /* Return to standard size from rhythm.less */
+    @h3-local: round(@base-font-size * @h3);
+	font-size: ~"@{h3-local}px";
+	font-size: ~"@{h3}rem";  
+  }
+
+
+ }
+/* @media screen and (min-width: 1680px) */
+@media screen and (min-width: 105em) {
+}
+/* @media screen and (min-width: 1872px) */
+@media screen and (min-width: 117em) {
+body {
+    /* Style tweeks go here */  
+  }
+}
+/* @media screen and (min-width: 2080px) */
+@media screen and (min-width: 130em) {
+  body {
+    /* Style tweeks go here */  
+  }
+}

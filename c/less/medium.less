@@ -1,0 +1,50 @@
+// MEDIUM GRID //
+
+// Importing styles here so that we can build one CSS file to control the layout for visitors with large screens
+@import 'global.less';
+@import 'grid.less';
+
+// For our medium grid we use 6 columns to maximize screen real estate 
+// This works nicely in that it is exactly half of our large sized grid
+// The numbers below help the design leverage the rule of thirds while
+// supporting 48 pixels as a touch friendly building block
+@column-width: 96;
+@gutter-width: 24;
+@columns: 6;
+
+// Give us divine proportions instead of pixels
+@total-width: 100%;
+
+// LAYOUT //
+.container {
+	width: 98%; // We need a little breathing room around the edges
+	padding: 0;
+	margin: 0;
+	margin-right: auto;
+	margin-left: auto;
+	background: transparent;
+}
+
+
+// DESIGN //
+
+// IN-BETWEEN SCREEN SIZE STYLE TWEEKS //
+// Below are em based breakpoints for fine tuning like scaling the baseline
+
+/* @media screen and (min-width: 640px) */
+@media screen and (min-width: 40em) {
+
+	/* Style tweeks go here
+	  element {
+	  	property: value; 
+	  }
+	*/
+
+}
+/* @media screen and (min-width: 720px) */
+@media screen and (min-width: 45em) {
+    /* Style tweeks go here */  
+}/* @media screen and (min-width: 888px) */
+@media screen and (min-width: 55.5em) {
+    /* Style tweeks go here */  
+}

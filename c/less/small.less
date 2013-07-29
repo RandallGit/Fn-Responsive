@@ -1,0 +1,27 @@
+@import 'global.less';
+@import 'grid.less';
+
+// SMALL GRID //
+
+// For our small grid we use 3 columns to maximize screen real estate
+// This is exactly half of our medium sized grid
+// and a fourth of our large grid.
+// It also uses the number 4 as an operator and 48 as a rhythm to make it play well with touch device screens
+@column-width: 96;
+@gutter-width: 24;
+@columns: 3;
+
+// Give us divine proportions instead of pixels
+@total-width: 100%;
+
+// LAYOUT //
+.container {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	margin-right: auto;
+	margin-left: auto;
+	background: transparent;
+}
+
+// DESIGN //

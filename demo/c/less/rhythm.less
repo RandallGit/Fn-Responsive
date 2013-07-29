@@ -1,0 +1,69 @@
+/* Modular Size typography */
+
+@base-font-size: 16;
+@important-font-size: 68.4;
+@font-ratio: 1.618;
+
+
+@base-diff: @important-font-size / @base-font-size;
+@h1: @important-font-size;
+@h2: (@base-diff / (@base-diff - (@base-diff / @font-ratio)));
+@h3: @font-ratio * (@base-diff - (@base-diff * @font-ratio));
+@h4: @font-ratio;
+@h5: (@base-diff - (@base-diff / @font-ratio));
+@h6: 1; //1em
+
+html {
+	font-size: 100%; // 10px = 1em
+}
+
+body {
+	font-size: ~"@{base-font-size}px";
+	font-size: ~"@{h6}rem";
+	line-height: @font-ratio;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	// Whatever values you want here
+	line-height: @font-ratio; 
+}
+
+h1 {
+	@font-ratio-local: (@font-ratio / 3);
+	font-size: ~"@{important-font-size}px";
+	font-size: ~"@{base-diff}rem";
+	line-height: @font-ratio-local;
+}
+
+h2 {
+	@font-ratio-local: (@font-ratio / 3);
+	@h2-local: round(@base-font-size * @h2);
+	font-size: ~"@{h2-local}px";
+	font-size: ~"@{h2}rem";
+	line-height: @font-ratio-local;
+}
+
+h3 {
+	@font-ratio-local: (@font-ratio / 2);
+	@h3-local: round(@base-font-size * @h3);
+	font-size: ~"@{h3-local}px";
+	font-size: ~"@{h3}rem";
+	line-height: @font-ratio-local;
+}
+
+h4 {
+	@h4-local: round(@base-font-size * @h4);
+	font-size: ~"@{h4-local}px";
+	font-size: ~"@{h4}rem";
+}
+
+h5 {
+	@h5-local: round(@base-font-size * @h5);
+	font-size: ~"@{h5-local}px";
+	font-size: ~"@{h5}rem";
+}
+
+h6 {
+	font-size: ~"@{base-font-size}px";
+	font-size: ~"@{h6}rem";
+}

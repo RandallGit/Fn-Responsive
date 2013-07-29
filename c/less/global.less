@@ -1,0 +1,60 @@
+/* Fn Responsive Grid System (2.0)	<http://fnresponsive.com/>
+   by Randall Elliott 				<http://randallelliott.com/>
+   currently unlicensed
+  
+   Many thanks to: 
+   Joni Korpi's Golden Grid System utilizing folding columns, elastic gutters and a scalable baseline grid.
+   Vladimir Carrer's Golden Grid that stirs my inner Fibonacci geek.
+   The Goldilocks Approach which paved the way to keep the main breaks simple with just three.
+   The Semantic Grid System brought to you by the friendly guys at TwigKit.
+
+   global.less
+   -----------------------------------------
+   1. GLOBAL VARIABLES
+   2. RESET & CONSISTENCY
+   3. ZOOMABLE BASELINE GRID
+   4. FLUID MEDIA
+
+   grid.less
+   -----------------------------------------
+   6. SEMANTIC GRID WITH BOX_MODEL HACK
+
+   small.less
+   -----------------------------------------
+   7. CUSTOM LAYOUT & TYPOGRAPHY (MOBILE)
+
+   medium.less
+   -----------------------------------------
+   8. CUSTOM LAYOUT & TYPOGRAPHY (TABLET)
+
+   large.less
+   -----------------------------------------
+   9. CUSTOM LAYOUT & TYPOGRAPHY (DESKTOP)
+
+*/
+
+// 1. GLOBAL VARIABLES 
+@import	"variables.less";
+
+// 2. RESET & CONSISTENCY
+@import "normalize.less";
+
+// 3. ZOOMABLE BASELINE GRID
+@import "rhythm.less";
+
+// 4. FLUID MEDIA - SIMPLE
+figure {
+  position: relative;
+}
+figure img,
+figure object,
+figure embed,
+figure video {
+  max-width: 100%;
+  display: block;
+}
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+// 5. GLOBAL STYLES
