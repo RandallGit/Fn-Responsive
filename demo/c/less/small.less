@@ -1,5 +1,5 @@
 @import 'global.less';
-@import 'grid.less';
+@import '../../../semantic.gs/stylesheets/less/grid.less';
 
 // GRID //
 
@@ -85,6 +85,30 @@
 		}
 	}
 }
+// Test to see if I can nest a new grid within a media query resetting the variables 
+// @media screen and (min-width: 984px)
+	@media screen and (min-width: 60em) {
+		@column-width: 89;
+		@gutter-width: 21;
+		@columns: 12;
+		#hero {
+			.column(12);
+				
+			div {
+				.row(12);
+				padding: 1em;
+			
+				figure {
+				.column(8,12);
+				padding-bottom: 1em;
+		
+				}
+				hgroup {
+				.column(12,12);
+				}
+			}
+		}
+	}
 
 // DESIGN //
 
