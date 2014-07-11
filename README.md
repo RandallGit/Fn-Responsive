@@ -4,7 +4,9 @@ Fn-Responsive
 Why another framework you ask?
 ------------------------------
 
-Bloated CSS frameworks like bootstrap made everything look and feel the same and [littered my mark-up with presentational classes](http://www.doidea.se/techblog/more-semantically-correct-html-with-less-and-bootstrap "Title") . It was like someone sent me in the web wayback machine to 2000. You are the Weakest Link! Goodbye! So I created a lightweight foundation of parts I liked and created the missing links.
+Bloated CSS frameworks like bootstrap made everything look and feel the same and [littered my mark-up with presentational classes](http://www.doidea.se/techblog/more-semantically-correct-html-with-less-and-bootstrap "Title"). It was like someone sent me in the web wayback machine to 2000. You are the Weakest Link! Goodbye! So I created a lightweight foundation of parts I liked and created the missing links.
+
+[View Example Page](http://randallgit.github.io/Fn-Responsive/ "View Example Page")
 
 This is a hodgepodge of parts and techniques I admit AND they have worked for many projects. This has been the foundation of prototpyes all the way to projects wrapped in Cordova deployed in app stores.
 
