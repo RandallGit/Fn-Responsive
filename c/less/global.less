@@ -1,0 +1,122 @@
+/* Fn Responsive Grid System (2.0)	<http://fnresponsive.com/>
+   by Randall Elliott 				<http://randallelliott.com/>
+   currently unlicensed
+  
+   Many thanks to: 
+   Joni Korpi's Golden Grid System utilizing folding columns, elastic gutters and a scalable baseline grid.
+   Vladimir Carrer's Golden Grid that stirs my inner Fibonacci geek.
+   The Goldilocks Approach which paved the way to keep the main breaks simple with just three.
+   The Semantic Grid System brought to you by the friendly guys at TwigKit.
+
+   global.less
+   -----------------------------------------
+   1. GLOBAL VARIABLES
+   2. RESET & CONSISTENCY
+   3. ZOOMABLE BASELINE GRID
+   4. FLUID MEDIA
+
+   grid.less
+   -----------------------------------------
+   6. SEMANTIC GRID WITH BOX_MODEL HACK
+
+   small.less
+   -----------------------------------------
+   7. CUSTOM LAYOUT & TYPOGRAPHY (MOBILE)
+
+   medium.less
+   -----------------------------------------
+   8. CUSTOM LAYOUT & TYPOGRAPHY (TABLET)
+
+   large.less
+   -----------------------------------------
+   9. CUSTOM LAYOUT & TYPOGRAPHY (DESKTOP)
+
+*/
+
+// 1. GLOBAL VARIABLES 
+@import	"variables.less";
+
+// 2. RESET & CONSISTENCY
+@import "normalize.less";
+
+// 3. ZOOMABLE BASELINE GRID
+@import "rhythm.less";
+
+// 4. FLUID MEDIA - SIMPLE
+figure {
+  position: relative;
+}
+figure img,
+figure object,
+figure embed,
+figure video {
+  max-width: 100%;
+  display: block;
+}
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+// 5. GLOBAL STYLES
+* {
+	-webkit-box-sizing: border-box;
+  	-moz-box-sizing: border-box;
+  	box-sizing: border-box;
+}
+body {
+	font-family: 'Cabin', sans-serif;
+	color: @defaultText;
+	background-color: #f7fdfa;
+	text-shadow: 1px 0px 0px white;
+}
+.column_example {
+	background-color: @baseColor;
+	color: @defaultText;
+	text-align: center;
+	text-shadow: 0px 1px 0px @analog2;
+	height: 4em;
+	padding-top: 1.5em;
+	box-shadow: 0px 3px 6px @darkShadow;
+}
+#column-container {
+	background-color: @greenDark;
+	box-shadow: inset 0px 1px 0px @lightShadow;
+}
+#values ul {
+	background-color: @baseColor;
+}
+#schema {
+	background-color: white;
+}
+
+h1 {
+	font-weight: 400;
+	color: @greenDark;
+	text-shadow: 0px -1px 1px @darkShadow;
+}
+h2, h3, h4, h5, h6 {
+	font-weight: 400;
+	margin: 0;
+	padding: 0;
+	padding-bottom: 0.375em;
+}
+h2 {
+	padding-bottom: 0.375em;
+}
+p {
+	text-align:justify;
+	text-justify:distribute;
+	margin: 0;
+	padding: 0;
+}
+#hero hgroup p {
+	text-align:left;
+}
+ul, li {
+	list-style: none;
+	margin: 0;
+	padding:0;
+}
+#thanks {
+	background-color: @baseColor;
+}

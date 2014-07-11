@@ -1,0 +1,153 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class=""> <!--<![endif]-->
+
+<!-- The comments above allow us to target old IE by assigning a class of "ie" to the <html>.
+	http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		<title></title>
+		
+		<!-- Please don't add "maximum-scale=1" here. It's bad for accessibility. -->
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		
+		<!-- You can include these like this during development. For production compile these and preload via something like yep nope.
+		Alter the media query widths, using ems, based on your layout NOT specific device breakpoints in pixels
+		<link rel="stylesheet" type="text/less" media="only screen" href="c/less/small.less">
+		<link rel="stylesheet" type="text/less" media="only screen and (min-width: 40em)" href="c/less/medium.less">
+		<link rel="stylesheet" type="text/less" media="only screen and (min-width: 60em)" href="c/less/large.less">
+		-->
+		<link rel="stylesheet" type="text/css" media="only screen" href="c/small.css">
+		<link rel="stylesheet" type="text/css" media="only screen and (min-width: 40em)" href="c/medium.css">
+		<link rel="stylesheet" type="text/css" media="only screen and (min-width: 60em)" href="c/large.css">
+		
+		<!-- This reads your LESS files during development -->
+		<script src="js/less-1.1.3.min.js" type="text/javascript"></script>
+		
+		<!-- Example of Google web font use use. -->
+		<link href='http://fonts.googleapis.com/css?family=Cabin:400,700' rel='stylesheet' type='text/css'>
+		
+		<!-- Full blown developer version of Modernizr NOT for production -->
+		<script src="js/modernizr-2.5.3.js" type="text/javascript"></script>  
+		
+		<!-- Example of Typekit use. Simply place in localhost and add "azuro-web" to your CSS -->		
+		<!-- <script type="text/javascript" src="http://use.typekit.com/mau0zfm.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script> -->
+		
+		<!-- This script enables structural HTML5 elements in old IE.
+			http://code.google.com/p/html5shim/ -->
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body lang="en">
+		<div class="container">
+			<div id="top-bar">
+				<header>
+					<div id="title">
+					<h1>Fn Responsive</h1>
+					</div>
+					<div id="callout">
+					<p>Watch the grid below fold as you resize your screen.</p>
+					</div>
+				</header>
+			</div>
+			<div id="example">
+				<div id="column-container">
+					<div id='c01' class="column_example">col</div>
+					<div id='c02' class="column_example">col</div>
+					<div id='c03' class="column_example">col</div>
+					<div id='c04' class="column_example">col</div>
+					<div id='c05' class="column_example">col</div>
+					<div id='c06' class="column_example">col</div>
+					<div id='c07' class="column_example">col</div>
+					<div id='c08' class="column_example">col</div>
+					<div id='c09' class="column_example">col</div>
+					<div id='c10' class="column_example">col</div>
+					<div id='c11' class="column_example">col</div>
+					<div id='c12' class="column_example">col</div>
+				</div>
+			</div>
+			<div id="hero">
+				<div>
+				<figure>
+					<img src="i/fnresponsiveHero.png" alt="hero grids">
+				</figure>
+				<hgroup>
+					<h2>A Responsible Grid</h2>
+					<p>Built from the ground-up for a responsive design that builds a bridge between design and development. Use it together to rapidly prototype adaptive designs. Much like the Swiss smashed the boundaries of grid design in the 50's the web may never be the same.</p>
+				</hgroup>
+				</div>
+			</div>
+			<div id="values">
+				<ul>
+					<li>
+					<h3>Design Geometry</h3>
+					<p>A designer carefully crafts the geometry of the layout and typographic rhythm. Fn Responsive calculates and controls the design as it was intended by the designer. The designs beautiful rhythm can leverage Fibonacci, The Golden Means, a musical scale or roll your own.</p>
+					</li>
+					<li>
+					<h3>Small, Medium Or Large</h3>
+					<p>Simplify responsive design in the early stages by concentrating on only three main form factors. Use "breakpoints" that straddle form factors rather than physical edges. Speak and design from a common foundation with limitless possibilities.</p>
+					</li>
+					<li>
+					<h3>Shared Design Language</h3>
+					<p>The grids help us translate how we see the responsive interactions from wireframes to hi-fi comps. The folding grids become a  sandbox to explore our interactions whether someone designs directly on the grids or takes a very liberal approach.<!--  Whatever your style this system increases the speed at which we can create prototypes and test our thinking. --></p>
+					</li>
+				</ul>
+				<ul>
+					<li>
+					<h3>LESS Is More</h3>
+					<p>Powered by <a href="http://lesscss.org/">LESS</a>. What I did not want was another CSS grid system that littered my markup with non-semantic classes. In reality when a project goes from concept to production we often have little control over things like HTML markup. Plus, it is good practice to separate content from style as often as you can.</p>
+					</li>
+					<li>
+					<h3>Device Agnostic</h3>
+					<p>With hundreds of screen resolutions and device dimensions evolving each day, the pixel is a moving target. To think about the web responsively is to <a href="http://trentwalton.com/2012/02/02/redefined/">think in proportions, not pixels</a>. The Fn responsive grid employs relative and unit-less measurements to free ourselves from the entanglement!</p>
+					</li>
+					<li>
+					<h3>Feature And Conditional</h3>
+					<p>We combine simplified markup with Modernizer's feature detection and conditional statements. We start by being very specific with our styles to control layout and avoid most browser specific hacks. Then we can test for features and provide a fallback if needed. As a last resort we can target specific browsers using conditional statements.</p>
+					</li>
+				</ul>
+			</div>
+			<div id="schema">
+				<section>
+					<figure>
+						<img src="i/schematic.png" alt="schematic">
+					</figure>
+					<ul>
+						<li><h3>foundation</h3>
+						<p>Beginning with a firm foundation of <a href='http://nicolasgallagher.com/about-normalize-css/'>a normalizer</a>, color variable and typographic rhythm. Normalize is an alternative to CSS resets. It is the product of hundreds of hours of extensive research by <a href="http://twitter.com/necolas">@necolas</a> and <a href="http://twitter.com/jon_neal">@jon_neal</a>.</p>
+						</li>
+						<li><h3>base</h3>
+						<p>Base layers the foundation files with the global styles. Grid.less sets the base for the grids and is based upon <a href="http://semantic.gs/">semantic.gs</a> so that the grid is abstracted from our mark-up. Here we leverage it to further separate different grid settings from each main viewport size by changing the grid settings in the three main layout files.</p>
+						</li>
+						<li><h3>layout</h3>
+						<p>Like the three bears we have three main layout files. Each of which includes the foundation and base along with screen proportion style tweaks to serve each device only what it needs.</p>
+						</li>
+					</ul>
+				</section>
+			</div>
+			<div id="thanks">
+				<footer>
+					<section>
+					<h3><a href="http://fnresponsive.com/">Fn Responsive Grid System (2.0)</a></h3>
+					<h6><a href="http://randallelliott.com/">by Randall Elliott</a></h6>
+					<p>currently unlicensed</p>
+					</section>
+					<section>
+					<h3>Many thanks to:</h3>
+					<ul>
+						<li><strong>Joni Korpi's Golden Grid System</strong> utilizing folding columns, elastic gutters and a scalable baseline grid.</li>
+						<li><strong>Vladimir Carrer's Golden Grid</strong> that stirs my inner Fibonacci geek.</li>
+						<li><strong>The Goldilocks Approach</strong> which paved the way to keep the main breaks simple with just three.</li>
+						<li><strong>The Semantic Grid System</strong> brought to you by the friendly guys at TwigKit.</li>
+					</ul>
+					</section>
+				</footer>
+			</div>
+		</div>
+	</body>
+</html>
